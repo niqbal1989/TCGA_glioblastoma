@@ -755,7 +755,7 @@ MesenchymalcondinfoExpNet <- condinfonetwork5(MesenchymalcondinfoExpNet,Mesenchy
 MesenchymalcondinfoExpNet <- condinfonetwork6(MesenchymalcondinfoExpNet,Mesenchymalgenes, MesenchymalmiRNA)
 MesenchymalcondinfoExpNet <- data.frame(lapply(MesenchymalcondinfoExpNet,function(x)factor(unlist(x))))
 write.table(MesenchymalcondinfoExpNet, "MesenchymalcondinfoExpNet.txt", quote=FALSE, sep="\t", dec=".", col.names=TRUE, row.names=TRUE)
-ExpNetwork <- organizenetwork(ExpNetwork)#something is wrong, there are not as many ExpNetwork interactions as there were before
+ExpNetwork <- organizenetwork(ExpNetwork)#there are not as many ExpNetwork interactions as there were before
 
 PredNetwork <- organizenetwork(PredNetwork)#498345
 organizedPredNetwork <- data.frame(lapply(PredNetwork,function(x)factor(unlist(x))))#definitely organized because tried to write PredNetwork to file and got EncodeElement error, meaning it was in some type of list format
